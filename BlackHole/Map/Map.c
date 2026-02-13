@@ -197,6 +197,12 @@ void* Map_FindNode(Map map, char* key)
 
 void Map_Delete(Map map, char* key)
 {
+	if (map == NULL || key == NULL)
+	{
+		return;
+	}
+
+
 }
 
 void Map_Clear(Map map)

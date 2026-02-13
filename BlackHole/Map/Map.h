@@ -40,4 +40,5 @@ void* Map_FindNode(Map map, char* key);
 void Map_Delete(Map map, char* key);
 void Map_Clear(Map map);
 void Map_ClearRecursive(Map map, MapNode node);
+
 #endif // __MAP_H__

@@ -41,6 +41,17 @@ bool List_RemoveIndex(List list, int index);
 bool List_Remove(List list, void* value);
 
 void List_ForEach(List list, fnFunc function, void* context);
-void List_Sort(List list, fnCompare compareFunc);
+
+// Sort the List
+void List_BubbleSort(List list, fnCompare compareFunc);
+
+// Merge Sort
+ListNode List_SortedMerge(ListNode a, ListNode b, fnCompare compareFunc);
+void List_SplitFrontBack(ListNode source, ListNode* front, ListNode* back);
+void List_MergeSortRecursive(ListNode* headRef, fnCompare compareFunc);
+void List_MergeSort(List list, fnCompare compareFunc);
+
+// Sort the List
+void List_Sort(List list, fnCompare compareFunc, bool isMerged);
 
 #endif // __LIST_H__
