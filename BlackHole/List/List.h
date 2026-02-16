@@ -54,4 +54,6 @@ void List_MergeSort(List list, fnCompare compareFunc);
 // Sort the List
 void List_Sort(List list, fnCompare compareFunc, bool isMerged);
 
+void List_Print(List list);
+
 #endif // __LIST_H__

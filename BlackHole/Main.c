@@ -5,6 +5,19 @@
 
 #include "Map/Map.h"
 #include "List/List.h"
+int compare(int* a, int* b)
+{
+	if (*a > *b)
+	{
+		return 1;
+	}
+	else
+	{
+		return -1;
+	}
+
+	return (0);
+}
 
 int main()
 {
@@ -19,11 +32,11 @@ int main()
 	List list;
 	List_Initialize(&list);
 
-	int a = 5;
-	int b = 10;
-	int c = 15;
-	int d = 20;
-	int e = 25;
+	int a = 10;
+	int b = 65;
+	int c = 80;
+	int d = 13;
+	int e = 5;
 
 	List_InsertStart(list, &a);
 	List_InsertStart(list, &b);
@@ -45,7 +58,11 @@ int main()
 		printf("failed to find node\n");
 	}
 
-	// List_Remove(list, 0);
+	List_Print(list);
+
+	List_Sort(list, compare, true);
+
+	List_Print(list);
 
 	List_Destroy(&list);
 

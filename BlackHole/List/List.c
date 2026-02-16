@@ -435,3 +435,17 @@ void List_Sort(List list, fnCompare compareFunc, bool isMerged)
 	}
 }
 
+void List_Print(List list)
+{
+	ListNode curr = list->rootNode;
+	while (curr != NULL)
+	{
+		ListNode next = curr->next;
+
+		// Pass the data AND the extra info (like dt or camera)
+		printf("%d | ", *(int*)curr->data);
+		curr = next;
+	}
+	printf("\n");
+}
+
